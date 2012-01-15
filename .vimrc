@@ -1,12 +1,15 @@
 call pathogen#infect()
 " call pathogen#helptags()
 syntax on
-" filetype plugin indent on
+filetype plugin indent on
 
 set nocompatible
 
 " Use UTF-8.
 set encoding=utf-8
+
+" Add line numbers.
+set number
 
 " Copy indent from current line when starting a new line 
 set autoindent
@@ -41,6 +44,7 @@ else
 endif
 
 set cursorline
+set cursorcolumn
 
 " Show NERDTree when vim starts
 " autocmd VimEnter * NERDTree
