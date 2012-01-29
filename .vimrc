@@ -1,5 +1,5 @@
 call pathogen#infect()
-" call pathogen#helptags()
+call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
@@ -44,7 +44,7 @@ else
 endif
 
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 
 " Show NERDTree when vim starts
 " autocmd VimEnter * NERDTree
@@ -54,3 +54,5 @@ nmap <silent> tt :NERDTreeToggle<cr>
 
 " map <F3> for ack current word
 " nmap <silent> <F3> :Ack<CR>
+
+let g:indent_guides_enable_on_vim_startup = 1
