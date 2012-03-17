@@ -52,6 +52,9 @@ set cursorline
 " Config the NERDTree
 nmap <silent> tt :NERDTreeToggle<cr>
 
+let NERDSpaceDelims = 1
+let NERDCompactSexyComs = 1
+
 " map <F3> for ack current word
 " nmap <silent> <F3> :Ack<CR>
 
