@@ -1,3 +1,3 @@
 " Size of GVim window
-set lines=45 columns=120
+set lines=40 columns=120
 
