@@ -61,3 +61,4 @@ let NERDCompactSexyComs = 1
 " nmap <silent> <F3> :Ack<CR>
 
 let g:indent_guides_enable_on_vim_startup = 1
+let g:CommandTMatchWindowReverse = 1
