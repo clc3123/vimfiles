@@ -4,6 +4,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'markdown')
+" call add(g:pathogen_disabled, 'vim-markdown-plasticboy')
 
 set nocompatible
 
