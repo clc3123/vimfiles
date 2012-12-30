@@ -13,6 +13,9 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+set ruler
+set linebreak
+
 " Use UTF-8.
 set encoding=utf-8
 
@@ -39,17 +42,17 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Shortcuts for moving between tabs.
-" Alt-j to move to the tab to the left
-noremap <A-j> gT
-" Alt-k to move to the tab to the right
-noremap <A-k> gt
+" if $COLORTERM == 'gnome-terminal'
+"   set t_Co=256
+" endif
 
-if has("gui_running")
-  colorscheme jellybeans
-else
-  colorscheme elflord
-endif
+" if has("gui_running")
+"   colorscheme jellybeans
+" else
+"   colorscheme elflord
+" endif
+
+colorscheme jellybeans
 
 set cursorline
 " set cursorcolumn
@@ -60,11 +63,25 @@ set cursorline
 " Config the NERDTree
 nmap <silent> tt :NERDTreeToggle<cr>
 
+imap <c-j> <Down>
+imap <c-k> <Up>
+imap <c-h> <left>
+imap <c-l> <Right>
+
+" vim tab binding
+nnoremap tn :tabnew %<cr>
+nnoremap tc :tabclose<cr>
+nnoremap th :tabprev<cr>
+" nnoremap th gT
+nnoremap tl :tabnext<cr>
+" nnoremap tl gt
+
 let NERDSpaceDelims = 1
 let NERDCompactSexyComs = 1
 
-" map <F3> for ack current word
-" nmap <silent> <F3> :Ack<CR>
+" map \a for ack current word in new tab
+nmap <Leader>a tn:Ack <cword><CR>
+" nmap <Leader>a tn:Ack <cWORD><CR>
 
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_color_change_percent = 20
