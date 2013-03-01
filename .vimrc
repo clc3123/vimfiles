@@ -1,20 +1,29 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " http://stackoverflow.com/questions/4261785/temporarily-disable-some-plugins-using-pathogen-in-vim
-" To disable a plugin, add it's bundle name to the following list
+" disable a plugin
 let g:pathogen_disabled = []
-call add(g:pathogen_disabled, 'markdown')
-" call add(g:pathogen_disabled, 'vim-markdown-plasticboy')
+" call add(g:pathogen_disabled, 'markdown')
+call add(g:pathogen_disabled, 'vim-markdown-plasticboy')
 
 set nocompatible
+set noswapfile
 
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+if !exists('g:netrw_list_hide')
+  let g:netrw_list_hide = '^\.,\~$,^tags$'
+endif
+
 set ruler
 set linebreak
+let &showbreak = '>>> '
+set scrolloff=1
+set sidescrolloff=5
+set display+=lastline
 
 " Use UTF-8.
 set encoding=utf-8

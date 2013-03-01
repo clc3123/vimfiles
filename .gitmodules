@@ -31,9 +31,6 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-lua-inspect"]
-	path = bundle/vim-lua-inspect
-	url = https://github.com/xolox/vim-lua-inspect.git
 [submodule "bundle/vim-markdown-plasticboy"]
 	path = bundle/vim-markdown-plasticboy
 	url = https://github.com/plasticboy/vim-markdown.git
