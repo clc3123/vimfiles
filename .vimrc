@@ -3,7 +3,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " http://stackoverflow.com/questions/4261785/temporarily-disable-some-plugins-using-pathogen-in-vim
 let g:pathogen_disabled = []
 " call add(g:pathogen_disabled, 'markdown')
-call add(g:pathogen_disabled, 'vim-markdown-plasticboy')
 
 set nocompatible
 

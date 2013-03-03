@@ -7,9 +7,6 @@
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://github.com/wincent/Command-T.git
 [submodule "bundle/vim-haml-sass"]
 	path = bundle/vim-haml-sass
 	url = git://github.com/tpope/vim-haml.git
@@ -31,6 +28,6 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule "bundle/vim-markdown-plasticboy"]
-	path = bundle/vim-markdown-plasticboy
-	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
