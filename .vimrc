@@ -7,6 +7,14 @@ call add(g:pathogen_disabled, 'vim-markdown-plasticboy')
 
 set nocompatible
 
+" Use UTF-8
+set encoding=utf-8
+set termencoding=utf-8
+" set fileencoding=utf-8
+if has('win32')
+  set guifont=Ubuntu_Mono:h12
+endif
+
 call pathogen#infect()
 " call pathogen#helptags()
 syntax on
@@ -38,10 +46,6 @@ set cursorline
 " set wildmenu
 set showcmd
 set laststatus=2
-
-" Use UTF-8
-set encoding=utf-8
-set termencoding=utf-8
 
 set autoread
 
