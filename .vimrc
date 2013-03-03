@@ -37,7 +37,7 @@ let &showbreak = '>>> '
 set scrolloff=1
 set display+=lastline
 " Add line numbers
-" set number
+set number
 " show cursor position
 set ruler
 set cursorline
