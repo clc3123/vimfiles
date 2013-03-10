@@ -64,8 +64,8 @@ set smartindent
 set backspace=indent,eol,start
 
 " highlight matching bracket for a short period
-set showmatch
-set matchtime=10
+" set showmatch
+" set matchtime=10
 
 " Insert spaces when the <tab> key is pressed
 set expandtab
