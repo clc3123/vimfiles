@@ -63,6 +63,8 @@ set smartindent
 " Backspace action setting for insert mode
 set backspace=indent,eol,start
 
+set fdm=marker
+
 " highlight matching bracket for a short period
 " set showmatch
 " set matchtime=10
