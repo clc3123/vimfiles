@@ -11,7 +11,7 @@ set encoding=utf-8
 set termencoding=utf-8
 " set fileencoding=utf-8
 if has('win32')
-  set guifont=Ubuntu_Mono:h12
+  set guifont=Ubuntu_Mono:h16
 endif
 
 call pathogen#infect()
