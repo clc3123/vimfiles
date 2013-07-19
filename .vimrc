@@ -105,7 +105,7 @@ let NERDSpaceDelims = 1
 let NERDCompactSexyComs = 1
 
 " map \a for ack current word in new tab
-nmap <Leader>a tn:Ack <cword><CR>
+nmap <Leader>a :Ack <cword><CR>
 
 " cd to the directory containing the file in the buffer
 nmap <silent> <leader>cd :lcd %:h<CR>
