@@ -94,6 +94,7 @@ imap <c-l> <Right>
 
 " vim tab binding
 nnoremap tn :tabnew "getcwd()"<cr>
+nnoremap td :tabnew %:p<cr>
 nnoremap tc :tabclose<cr>
 nnoremap th :tabprev<cr>
 nnoremap tl :tabnext<cr>
