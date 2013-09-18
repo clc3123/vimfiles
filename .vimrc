@@ -118,3 +118,5 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<F5>', '<c-c>'],
   \ 'PrtExit()':            ['<esc>', '<c-g>'],
   \ }
+
+let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column"
