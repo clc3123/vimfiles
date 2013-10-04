@@ -119,4 +119,67 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtExit()':            ['<esc>', '<c-g>'],
   \ }
 
+" ((( vim-ack setting
 let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column"
+" ))) vim-ack setting
+
+" ((( mappings extracted from https://github.com/tpope/vim-unimpaired/blob/master/plugin/unimpaired.vim
+function! s:setup_paste() abort
+  let s:paste = &paste
+  set paste
+endfunction
+
+nnoremap <silent> <SID>unimpairedPaste :call <SID>setup_paste()<CR>
+nnoremap <silent> <script> yp  <SID>unimpairedPastea
+nnoremap <silent> <script> yP  <SID>unimpairedPastei
+nnoremap <silent> <script> yo  <SID>unimpairedPasteo
+nnoremap <silent> <script> yO  <SID>unimpairedPasteO
+nnoremap <silent> <script> yA  <SID>unimpairedPasteA
+nnoremap <silent> <script> yI  <SID>unimpairedPasteI
+nnoremap <silent> <script> ygi <SID>unimpairedPastegi
+nnoremap <silent> <script> ygI <SID>unimpairedPastegI
+
+augroup unimpaired_paste
+  autocmd!
+  autocmd InsertLeave *
+        \ if exists('s:paste') |
+        \   let &paste = s:paste |
+        \   unlet s:paste |
+        \ endif
+augroup END
+
+function! s:BlankUp(count) abort
+  put!=repeat(nr2char(10), a:count)
+  ']+1
+  silent! call repeat#set("\<SID>unimpairedBlankUp", a:count)
+endfunction
+
+function! s:BlankDown(count) abort
+  put =repeat(nr2char(10), a:count)
+  '[-1
+  silent! call repeat#set("\<SID>unimpairedBlankDown", a:count)
+endfunction
+
+nnoremap <silent> <SID>unimpairedBlankUp   :<C-U>call <SID>BlankUp(v:count1)<CR>
+nnoremap <silent> <SID>unimpairedBlankDown :<C-U>call <SID>BlankDown(v:count1)<CR>
+
+nmap [<Space> <SID>unimpairedBlankUp
+nmap ]<Space> <SID>unimpairedBlankDown
+
+function! s:Move(cmd, count, map) abort
+  normal! m`
+  exe 'move'.a:cmd.a:count
+  norm! ``
+  silent! call repeat#set("\<SID>unimpairedMove".a:map, a:count)
+endfunction
+
+nnoremap <silent> <SID>unimpairedMoveUp   :<C-U>call <SID>Move('--',v:count1,'Up')<CR>
+nnoremap <silent> <SID>unimpairedMoveDown :<C-U>call <SID>Move('+',v:count1,'Down')<CR>
+xnoremap <silent> <SID>unimpairedMoveUp   :<C-U>exe 'exe "normal! m`"<Bar>''<,''>move--'.v:count1<CR>``
+xnoremap <silent> <SID>unimpairedMoveDown :<C-U>exe 'exe "normal! m`"<Bar>''<,''>move''>+'.v:count1<CR>``
+
+nmap [e <SID>unimpairedMoveUp
+nmap ]e <SID>unimpairedMoveDown
+xmap [e <SID>unimpairedMoveUp
+xmap ]e <SID>unimpairedMoveDown
+" ))) mappings extracted from https://github.com/tpope/vim-unimpaired/blob/master/plugin/unimpaired.vim
