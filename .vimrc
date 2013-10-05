@@ -15,6 +15,7 @@ if has('win32')
 endif
 
 call pathogen#infect()
+" Instead of generating plugin docs when VIM starts up, you can do it lazy with :Helptags.
 " call pathogen#helptags()
 syntax on
 filetype plugin indent on
@@ -22,9 +23,11 @@ filetype plugin indent on
 set noswapfile
 
 set t_Co=256
-colorscheme jellybeans
-" https://github.com/tomasr/molokai
+
 " colorscheme molokai
+colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night
+" colorscheme jellybeans
 " if has("gui_running")
 "   colorscheme jellybeans
 " endif
@@ -112,7 +115,7 @@ nmap <Leader>a :Ack <cword><CR>
 nmap <silent> <leader>cd :lcd %:h<CR>
 
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_color_change_percent = 20
+" let g:indent_guides_color_change_percent = 10
 
 let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<F5>', '<c-c>'],
