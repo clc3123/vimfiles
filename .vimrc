@@ -90,10 +90,10 @@ set smartcase
 
 nmap <silent> tt :NERDTreeToggle<cr>
 
-imap <c-j> <Down>
-imap <c-k> <Up>
-imap <c-h> <left>
-imap <c-l> <Right>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-h> <left>
+inoremap <c-l> <Right>
 
 " vim tab binding
 nnoremap tn :tabnew "getcwd()"<cr>
