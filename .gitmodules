@@ -49,3 +49,6 @@
 [submodule "colors/tomorrow"]
 	path = colors/tomorrow
 	url = git@github.com:chriskempson/tomorrow-theme.git
+[submodule "bundle/vim-autoclose-Karl-Guertin"]
+	path = bundle/vim-autoclose-Karl-Guertin
+	url = git@github.com:vim-scripts/AutoClose.git

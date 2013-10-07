@@ -89,6 +89,7 @@ set ignorecase
 set smartcase
 
 nmap <silent> tt :NERDTreeToggle<cr>
+nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
 inoremap <c-j> <Down>
 inoremap <c-k> <Up>
