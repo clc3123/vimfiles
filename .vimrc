@@ -97,7 +97,7 @@ nmap <Leader>x <Plug>ToggleAutoCloseMappings
 inoremap <C-J> <Down>
 inoremap <C-K> <Up>
 inoremap <C-H> <Left>
-inoremap <C-L> <Right
+inoremap <C-L> <Right>
 
 " version 2, also working
 " inoremap <C-h> <C-o>h
