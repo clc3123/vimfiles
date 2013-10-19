@@ -91,10 +91,10 @@ set smartcase
 nmap <silent> tt :NERDTreeToggle<cr>
 nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
-imap <c-j> <Down>
-imap <c-k> <Up>
-imap <c-h> <left>
-imap <c-l> <Right>
+" imap <C-J> <Down>
+" imap <C-K> <Up>
+" imap <C-H> <Left>
+" imap <C-L> <Right>
 
 " vim tab binding
 nnoremap tn :tabnew "getcwd()"<cr>
