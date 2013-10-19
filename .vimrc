@@ -2,7 +2,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " http://stackoverflow.com/questions/4261785/temporarily-disable-some-plugins-using-pathogen-in-vim
 let g:pathogen_disabled = []
-" call add(g:pathogen_disabled, 'markdown')
+call add(g:pathogen_disabled, 'vim-autoclose-Karl-Guertin')
 
 set nocompatible
 
@@ -91,10 +91,19 @@ set smartcase
 nmap <silent> tt :NERDTreeToggle<cr>
 nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
-" imap <C-J> <Down>
-" imap <C-K> <Up>
-" imap <C-H> <Left>
-" imap <C-L> <Right>
+" move cursor in Insert Mode 
+" vim-autoclose conflicts with imapping <c-h>, so disabled vim-autoclose
+" `:verbose imap <c-h>` reveals when vim-autoclose enabled
+inoremap <C-J> <Down>
+inoremap <C-K> <Up>
+inoremap <C-H> <Left>
+inoremap <C-L> <Right
+
+" version 2, also working
+" inoremap <C-h> <C-o>h
+" inoremap <C-j> <C-o>j
+" inoremap <C-k> <C-o>k
+" inoremap <C-l> <C-o>l
 
 " vim tab binding
 nnoremap tn :tabnew "getcwd()"<cr>
