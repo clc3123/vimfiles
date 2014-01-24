@@ -52,3 +52,6 @@
 [submodule "bundle/vim-autoclose-Karl-Guertin"]
 	path = bundle/vim-autoclose-Karl-Guertin
 	url = git@github.com:vim-scripts/AutoClose.git
+[submodule "colors/solarized"]
+	path = colors/solarized
+	url = git@github.com:altercation/vim-colors-solarized.git
