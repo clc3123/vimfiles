@@ -9,6 +9,8 @@ set nocompatible
 " Use UTF-8
 set encoding=utf-8
 set termencoding=utf-8
+" see :help encoding-values for supported encodings
+set fileencodings=ucs-bom,utf-8,cp936,big5,latin1
 " set fileencoding=utf-8
 if has('win32')
   set guifont=Ubuntu_Mono:h16
@@ -35,7 +37,7 @@ colorscheme Tomorrow-Night-Bright
 " let g:netrw_list_hide = '^\.,\~$,^tags$'
 
 set wrap
-set linebreak
+set nolinebreak
 let &showbreak = '>>> '
 set scrolloff=1
 set display+=lastline
@@ -131,6 +133,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtClearCache()':      ['<F5>', '<c-c>'],
   \ 'PrtExit()':            ['<esc>', '<c-g>'],
   \ }
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ((( vim-ack setting
 let g:ackprg="/usr/local/bin/ack -H --nocolor --nogroup --column"
